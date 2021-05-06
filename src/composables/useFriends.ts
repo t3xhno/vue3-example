@@ -6,7 +6,7 @@ const useFriends = () => {
     const { swal } = useSwal();
     const friends = ref({});
     const validPassword = /[0|+381]6\d[/|\s]?\d{2}[-|\s]?\d{2}[-|\s]?\d{2,3}/;
-    const checkPassword = (pass: string) => validPassword.exec(pass);
+    const checkPassword = (pass: string) => validPassword.exec(pass) ? true : false;
     const resetFriends = () => friends.value = {};
     const getFriends = async (pass: string) => {
         resetFriends();
