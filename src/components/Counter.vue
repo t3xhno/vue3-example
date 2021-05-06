@@ -3,6 +3,7 @@
     {{ counter }}
     <button @click="inc()">Increment Counter</button>
     <button @click="reset()">Reset Counter</button>
+    lol
   </div>
 </template>
 
