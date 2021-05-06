@@ -1,0 +1,21 @@
+<template>
+    <h1>My friends!</h1>
+    <InputGroup @get-friends="tryGettingFriends"/>
+    <FriendsList :friends="friends"/>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import useFriends from '../composables/useFriends';
+import InputGroup from '../components/InputGroup.vue';
+import FriendsList from '../components/FriendsList.vue';
+
+export default defineComponent({
+    components: { InputGroup, FriendsList },
+    setup: () => {
+        const { friends, getFriends } = useFriends();
+        const tryGettingFriends = (pass: string) => getFriends(pass);
+        return { tryGettingFriends, friends };
+    }
+});
+</script>
