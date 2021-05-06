@@ -1,6 +1,7 @@
-import Swal, { SweetAlertIcon, SweetAlertResult } from 'sweetalert2';
+import Swal, { SweetAlertResult } from 'sweetalert2';
 
-type SwalType = (a: string, b: string, c: SweetAlertIcon, d: string) => Promise<SweetAlertResult<any>>
+type Icons = "warning" | "success" | "info" | "question" | "error";
+type SwalType = (a: string, b: string, c: Icons, d: string) => Promise<SweetAlertResult<any>>
 
 const useSwal = () => {
     const swal: SwalType = (title, text, icon, confirmButtonText) =>
