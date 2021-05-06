@@ -4,7 +4,7 @@ type Icons = "warning" | "success" | "info" | "question" | "error";
 type SwalType = (a: string, b: string, c: Icons, d: string) => Promise<SweetAlertResult<any>>
 
 const useSwal = () => {
-    const swal: SwalType = (title, text, icon, confirmButtonText) =>
+    const swal: SwalType = (title, text, icon, confirmButtonText = 'Close') =>
         Swal.fire({ title, text, icon, confirmButtonText });
     return { swal };
 };
