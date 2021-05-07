@@ -13,7 +13,7 @@ const useFriends = () => {
         resetFriends();
         checkPassword(pass) ?
             fetchFriendsAction() :
-            swal("Error!", "You've entered the wrong password!", "error", "Close");
+            swal("Error!", "You've entered the wrong password!", "error");
     };
     return { friends, getFriends };
 };
