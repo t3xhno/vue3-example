@@ -1,4 +1,4 @@
-# Frontend
+# Frontend ![Haha yes, die trash](./src/assets/images/dieTrash.jpg)
 
 ## Project setup
 ```
