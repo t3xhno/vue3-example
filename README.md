@@ -21,5 +21,4 @@ npm run lint
 ```
 
 ### Some custom linter configuration details:
-<img src="https://imgur.com/a/RLS061u">
-![Linter configuration image](https://imgur.com/a/RLS061u)
+![Linter configuration image](./Linter_Config.png)
