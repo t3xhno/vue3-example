@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Counter/>
+    <img src="./assets/images/dieTrash.jpg" alt="lol">
     <Friends/>
   </div>
 </template>
