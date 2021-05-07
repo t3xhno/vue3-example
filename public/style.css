@@ -11,5 +11,25 @@
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.friends-list-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    box-shadow: 5px 5px 20px black;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.friends-list-ul {
+    list-style: none;
+}
+
+.friends-list-item {
+    margin: 30px auto;
 }

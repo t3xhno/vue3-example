@@ -1,14 +1,17 @@
 <template>
-    <ul>
-        <li
-            v-for="(friend, index) in friends"
-            :key="index"
-        >
-            <h3>{{ friend.name }}</h3>
-            <p>Age: {{ friend.age }}</p>
-            <p>Phone number: {{ friend.phone }}</p>
-        </li>
-    </ul>
+    <div class="friends-list-container">
+        <ul class="friends-list-ul">
+            <li
+                v-for="(friend, index) in friends"
+                :key="index"
+                class="friends-list-item"
+            >
+                <h3>{{ friend.name }}</h3>
+                <p>Age: {{ friend.age }}</p>
+                <p>Phone number: {{ friend.phone }}</p>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script lang="ts">
@@ -23,9 +26,11 @@ interface Friends {
 export default defineComponent({
     props: {
         friends: {
-            type: Object as PropType<Friends>,
+            type: Array as PropType<Friends[]>,
             default: () => {
-                return {};
+                return [
+                    { name: "No friends, lol :)", age: 0, phone: "Nobody calls you, anyway." }
+                ];
             }
         }
     }
