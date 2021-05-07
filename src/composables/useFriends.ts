@@ -1,6 +1,6 @@
-import { fetchFriends } from '../api/friends';
-import { ref } from 'vue';
-import useSwal from '../composables/useSwal';
+import { fetchFriends } from "../api/friends";
+import { ref } from "vue";
+import useSwal from "../composables/useSwal";
 
 const useFriends = () => {
     const { swal } = useSwal();

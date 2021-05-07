@@ -1,6 +1,9 @@
 <template>
     <ul>
-        <li v-for="(friend, index) in friends" :key="index">
+        <li
+            v-for="(friend, index) in friends"
+            :key="index"
+        >
             <h3>{{ friend.name }}</h3>
             <p>Age: {{ friend.age }}</p>
             <p>Phone number: {{ friend.phone }}</p>
@@ -9,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { defineComponent, PropType } from "vue";
 
 interface Friends {
     name?: string,
@@ -20,8 +23,11 @@ interface Friends {
 export default defineComponent({
     props: {
         friends: {
-            type: Object as PropType<Friends>
+            type: Object as PropType<Friends>,
+            default: () => {
+                return {};
+            }
         }
-    },
-})
+    }
+});
 </script>

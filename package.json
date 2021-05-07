@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "lint": "eslint . --ext .ts --ext .vue --fix"
   },
   "dependencies": {
+    "@vue/cli-plugin-eslint": "^4.5.12",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "sweetalert2": "^10.16.7",

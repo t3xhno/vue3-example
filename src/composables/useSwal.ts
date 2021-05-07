@@ -1,4 +1,4 @@
-import Swal, { SweetAlertResult } from 'sweetalert2';
+import Swal, { SweetAlertResult } from "sweetalert2";
 
 type Icons = "warning" | "success" | "info" | "question" | "error";
 type SwalType = (a: string, b: string, c: Icons, d: string) => Promise<SweetAlertResult<any>>
