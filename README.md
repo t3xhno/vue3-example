@@ -1,6 +1,6 @@
 # Frontend
 
-<img src="./src/assets/images/dieTrash.jpg" align="center" width="200" height="auto" style="margin:0 auto">
+<img src="./src/assets/images/dieTrash.jpg" width="200" height="auto">
 
 ## Project setup
 ```
