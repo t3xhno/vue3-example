@@ -2,7 +2,7 @@
 
 <img src="./src/assets/images/dieTrash.jpg" width="200" height="auto">
 
-```
+``` zsh
 npm install
 npm run serve
 npm run build
