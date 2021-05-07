@@ -40,7 +40,7 @@ module.exports = {
         "vue/no-multiple-template-root": "off",
         // For automatically fixing identation levels within the template tags in a .vue file.
         "vue/html-indent": ["error", 4, {
-            "attribute": 1, // Intents attributes within a tag.
+            "attribute": 1, // Indents attributes within a tag.
             "baseIndent": 1,
             "closeBracket": 0, // Does not indent the closing bracket of a tag.
             "alignAttributesVertically": true,
