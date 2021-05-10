@@ -28,6 +28,7 @@ const useGenerics = () => {
 
     type Whatever = <T>(obj: T) => void;
     const getGeneric: Whatever = obj => console.log(obj);
-    return { last, makePair, makeFullName, last1, last2, p1, p2, p3, p4, getGeneric, fullName1 };
+
+    return { last, makePair, makeFullName, last1, last2, p1, p2, p3, p4, getGeneric, fullName1, lastFn, makeFullName1 };
 };
 export default useGenerics;
