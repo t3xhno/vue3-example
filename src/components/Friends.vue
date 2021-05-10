@@ -6,15 +6,19 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import useFriends from "../composables/useFriends";
 import InputGroup from "../components/InputGroup.vue";
 import FriendsList from "../components/FriendsList.vue";
+import useGenerics from "../composables/useGenerics";
+import useFriends from "../composables/useFriends";
 
 export default defineComponent({
     components: { InputGroup, FriendsList },
     setup: () => {
+        const { getGeneric } = useGenerics();
+        getGeneric();
         const { friends, getFriends } = useFriends();
         const tryGettingFriends = (pass: string) => getFriends(pass);
+
         return { tryGettingFriends, friends };
     }
 });

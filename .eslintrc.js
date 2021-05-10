@@ -53,7 +53,11 @@ module.exports = {
             "allowElseIf": false
         }],
         // GET BACK TO THE MAGIC NUMBERS - NEEDS BETTER DEFINITION
-        "no-magic-numbers": ["error"],
+        // "no-magic-numbers": ["error", {
+        //     "ignoreArrayIndexes": true,
+        //     "ignoreDefaultValues": true,
+        //     "detectObjects": true
+        // }],
         "no-multi-spaces": ["error", {
             "ignoreEOLComments": true,
             "exceptions": {
