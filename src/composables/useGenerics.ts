@@ -14,7 +14,8 @@ const useGenerics = () => {
     const makeFullName: Constrain = obj => ({ fullName: `${obj.firstName} ${obj.lastName}`, ...obj });
     const myObj = { firstName: "Marko", lastName: "Lazic", age: 28 };
     const fullName1 = makeFullName(myObj);
-    const getGeneric = () => console.log(fullName1);
-    return { last, makePair, makeFullName, last1, last2, pair1, pair2, pair3, getGeneric };
+    type Whatever = <T>(obj: T) => void;
+    const getGeneric: Whatever = obj => console.log(obj);
+    return { last, makePair, makeFullName, last1, last2, pair1, pair2, pair3, getGeneric, fullName1 };
 };
 export default useGenerics;

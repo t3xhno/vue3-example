@@ -14,8 +14,8 @@ import useFriends from "../composables/useFriends";
 export default defineComponent({
     components: { InputGroup, FriendsList },
     setup: () => {
-        const { getGeneric } = useGenerics();
-        getGeneric();
+        const { getGeneric, fullName1: fN } = useGenerics();
+        getGeneric(fN);
         const { friends, getFriends } = useFriends();
         const tryGettingFriends = (pass: string) => getFriends(pass);
 
