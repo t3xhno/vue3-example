@@ -6,6 +6,7 @@
 npm install
 npm run serve
 npm run build
+npm run test
 ```
 
 ### Run linter with --fix flag set
