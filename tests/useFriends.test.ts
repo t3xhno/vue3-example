@@ -10,7 +10,7 @@ describe("Checking the getFriends function...", () => {
     });
 
     test("Friends initialized to {}", () => {
-        expect(initialFriends).toStrictEqual({});;
+        expect(initialFriends).toStrictEqual({});
     });
     test("getFriends executes corretly", async (done) => {
         await getFriends("+38166/63-30-051");
