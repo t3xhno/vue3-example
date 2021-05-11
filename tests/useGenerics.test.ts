@@ -31,12 +31,12 @@ describe("Checking useGenerics functions...", () => {
             expect(makeFullName(originalObject)).toStrictEqual({ fullName: "Marko Lazic", ...originalObject });
         });
     });
-    describe('Covering the example functions', () => {
-        test('They work', () => {
+    describe("Covering the example functions", () => {
+        test("They work", () => {
             expect(lastFn([0, 1, 2, 3])).toBe(3);
         });
-        test('They work2', () => {
-            expect(makeFullName1({ firstName: 'Lol', lastName: 'Hehe' })).toStrictEqual({ firstName: 'Lol', lastName: 'Hehe', fullName: 'Lol Hehe' });
+        test("They work2", () => {
+            expect(makeFullName1({ firstName: "Lol", lastName: "Hehe" })).toStrictEqual({ firstName: "Lol", lastName: "Hehe", fullName: "Lol Hehe" });
         });
     });
 });

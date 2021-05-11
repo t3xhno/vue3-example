@@ -18,15 +18,15 @@
 import { defineComponent, PropType } from "vue";
 
 interface Friends {
-    name?: string,
-    age?: number,
-    phone?: string
+    name: string,
+    age: number,
+    phone: string
 }
 
 export default defineComponent({
     props: {
         friends: {
-            type: Array as PropType<Friends[]>,
+            type: Array as PropType<Partial<Friends>[]>,
             default: () => {
                 return [
                     { name: "No friends, lol :)", age: 0, phone: "Nobody calls you, anyway." }
