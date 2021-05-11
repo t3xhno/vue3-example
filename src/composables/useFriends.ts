@@ -9,10 +9,10 @@ const useFriends = () => {
     const fetchFriendsAction = async () => friends.value = (await fetchFriends()).data.data;
     const checkPassword = (pass: string) => validPassword.exec(pass) ? true : false;
     const resetFriends = () => friends.value = {};
-    const getFriends = (pass: string) => {
+    const getFriends = async (pass: string) => {
         resetFriends();
         checkPassword(pass) ?
-            fetchFriendsAction() :
+            await fetchFriendsAction() :
             swal("Error!", "You've entered the wrong password!", "error");
     };
     return { friends, getFriends };

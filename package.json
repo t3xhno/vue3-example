@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "eslint . --ext .ts --ext .vue --fix",
-    "test": "jest"
+    "test": "jest --coverage=true --verbose --watch"
   },
   "dependencies": {
     "@vue/cli-plugin-eslint": "^4.5.12",
