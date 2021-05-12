@@ -1,13 +1,14 @@
 import { computed } from "vue";
-import { useStore } from "../store/index";
+import { useStore, Store } from "../store/index";
 import { CounterMutationTypes } from "../store/modules/counter/mutation-types";
 
-const useCounter = () => {
-    const store = useStore();
-    const counter = computed(() => store.state.counter);
-    const doubleCounter = computed(() => store.getters.doubleCounter);
-    const inc = () => store.commit(CounterMutationTypes.INCREMENT);
-    const reset = () => store.commit(CounterMutationTypes.RESET);
+const store = useStore();
+
+const useCounter = (myStore: Store = store) => {
+    const counter = computed(() => myStore.state.counter);
+    const doubleCounter = computed(() => myStore.getters.doubleCounter);
+    const inc = () => myStore.commit(CounterMutationTypes.INCREMENT);
+    const reset = () => myStore.commit(CounterMutationTypes.RESET);
     return { counter, doubleCounter, inc, reset };
 };
 
