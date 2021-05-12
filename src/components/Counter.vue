@@ -11,13 +11,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import useCounter from "../composables/useCounter";
+import { defineComponent, computed } from "vue";
+import { useStore } from "../store/index";
+import { CounterMutationTypes } from "../store/modules/counter/mutation-types";
 
 export default defineComponent({
-    name: "HelloWorld",
     setup: () => {
-        const { counter, inc, reset } = useCounter();
+        const store = useStore();
+        const counter = computed(() => store.state.counter);
+        const inc = () => store.commit(CounterMutationTypes.INCREMENT);
+        const reset = () => store.commit(CounterMutationTypes.RESET);
         return { counter, inc, reset };
     }
 });
