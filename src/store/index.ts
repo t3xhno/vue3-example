@@ -8,10 +8,10 @@ export const store = createStore({
 });
 
 export type Store = Omit<VuexStore<CounterState>, "getters" | "commit"> & {
-        commit<K extends keyof CounterMutations>(
-            key: K, options?: CommitOptions
-        ): ReturnType<CounterMutations[K]>
-    } & {
+    commit<K extends keyof CounterMutations>(
+        key: K, options?: CommitOptions
+    ): ReturnType<CounterMutations[K]>
+} & {
     getters: {
         [K in keyof CounterGetters]: ReturnType<CounterGetters[K]>
     }
