@@ -6,7 +6,7 @@ const initialFriends = friends.value;
 
 describe("Checking the getFriends function...", () => {
     beforeEach(() => {
-        axios.get.mockImplementationOnce(() => Promise.resolve({ data: { data: [ { firstName: "Marko" } ] } }));
+        axios.get.mockImplementationOnce(async () => await ({ data: { data: [ { firstName: "Marko" } ] } }));
     });
 
     test("Friends initialized to {}", () => {
