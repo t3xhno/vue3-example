@@ -11,6 +11,24 @@
                 <p>Phone number: {{ friend.phone }}</p>
             </li>
         </ul>
+        <div class="generator-container">
+            <li
+                v-for="(lol, index) of range(1, 100, 7)"
+                :key="index"
+                class="generated-range"
+            >
+                {{ lol }}
+            </li>
+        </div>
+        <div class="generator-container">
+            <li
+                v-for="(lol, index) of fibo(15)"
+                :key="index"
+                class="generated-range"
+            >
+                {{ lol }}
+            </li>
+        </div>
     </div>
 </template>
 
@@ -33,6 +51,18 @@ export default defineComponent({
                 ];
             }
         }
+    },
+    setup: () => {
+        function* range(min: number, max: number, step = 1) { while(min <= max) yield (min += step) - step; }
+        function* fibo(n: number) {
+            const inf = !n && n !== 0;
+            let [f1, f2] = [0, 1];
+            while(inf || n--) {
+                yield f1;
+                [f1, f2] = [f2, f1 + f2];
+            }
+        }
+        return { range, fibo };
     }
 });
 </script>

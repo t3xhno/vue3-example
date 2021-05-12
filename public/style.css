@@ -16,6 +16,7 @@
 
 .friends-list-container {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: auto;
     justify-content: center;
@@ -26,10 +27,21 @@
     border-radius: 50px;
 }
 
+.generator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .friends-list-ul {
     list-style: none;
 }
 
 .friends-list-item {
     margin: 30px auto;
+}
+
+.generated-range {
+    list-style: none;
+    margin: 5px;
 }
