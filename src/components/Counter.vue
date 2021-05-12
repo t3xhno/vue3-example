@@ -7,6 +7,7 @@
         <button @click="reset()">
             Reset Counter
         </button>
+        {{ doubleCounter }}
     </div>
 </template>
 
@@ -19,9 +20,10 @@ export default defineComponent({
     setup: () => {
         const store = useStore();
         const counter = computed(() => store.state.counter);
+        const doubleCounter = computed(() => store.getters.doubleCounter);
         const inc = () => store.commit(CounterMutationTypes.INCREMENT);
         const reset = () => store.commit(CounterMutationTypes.RESET);
-        return { counter, inc, reset };
+        return { counter, inc, reset, doubleCounter };
     }
 });
 </script>
