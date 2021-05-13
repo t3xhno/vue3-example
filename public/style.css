@@ -45,3 +45,24 @@
     list-style: none;
     margin: 5px;
 }
+
+/* NAVBAR */
+.nav-bar-container {
+    width: 100%;
+}
+
+.routes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+}
+
+.routes-item {
+    color: black;
+}
+
+.routes-item[active=true] {
+    color: blue;
+}

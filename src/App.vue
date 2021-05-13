@@ -1,21 +1,20 @@
 <template>
     <div class="container">
-        <Counter />
+        <NavBar />
         <img
             src="./assets/images/dieTrash.jpg"
             alt="lol"
         >
-        <Friends />
+        <router-view />
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Counter from "./components/Counter.vue";
-import Friends from "./components/Friends.vue";
+import NavBar from "./components/NavBar.vue";
 
 export default defineComponent({
     name: "App",
-    components: { Counter, Friends }
+    components: { NavBar }
 });
 </script>
