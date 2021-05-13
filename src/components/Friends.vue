@@ -18,7 +18,6 @@ export default defineComponent({
         getGeneric(fN);
         const { friends, getFriends } = useFriends();
         const tryGettingFriends = (pass: string) => getFriends(pass);
-
         return { tryGettingFriends, friends };
     }
 });
