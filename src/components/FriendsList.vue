@@ -6,6 +6,11 @@
                 :key="index"
                 class="friends-list-item"
             >
+                <img
+                    id="friends-list-before-image"
+                    :src="`https://source.unsplash.com/collection/144156?sig=${index}`"
+                    alt="rofl nvm"
+                >
                 <h3>{{ friend.name }}</h3>
                 <p>Age: {{ friend.age }}</p>
                 <p>Phone number: {{ friend.phone }}</p>

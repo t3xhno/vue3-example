@@ -2,6 +2,7 @@
     <h1>My friends!</h1>
     <InputGroup @get-friends="tryGettingFriends" />
     <FriendsList :friends="friends" />
+    <div id="test-lol" />
 </template>
 
 <script lang="ts">

@@ -63,6 +63,34 @@
     color: black;
 }
 
-.routes-item[active=true] {
-    color: blue;
+.routes-item[active="true"] {
+    color: green;
+}
+
+#die-trash-container {
+    margin: 20px auto;
+}
+
+#die-trash {
+    margin: 20px;
+    float: left;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    shape-outside: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+#test-lol {
+    width:100px;
+    height: 150px;
+    background: url("https://source.unsplash.com/random/experimental") no-repeat center center/cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
+    margin-bottom: 50px;
+}
+
+#friends-list-before-image {
+    position: absolute;
+    transform: translateX(-120%);
+    width: 50px;
+    height: 60px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
+    margin-bottom: 50px;
 }

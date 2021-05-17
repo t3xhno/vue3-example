@@ -16,7 +16,8 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import router, { RouteType } from "../router/index";
+import router from "../router/index";
+import { RouteType } from "../router/routes";
 
 export default defineComponent({
     setup() {
