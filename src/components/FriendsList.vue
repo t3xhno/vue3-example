@@ -8,12 +8,15 @@
             >
                 <img
                     id="friends-list-before-image"
-                    :src="`https://source.unsplash.com/collection/144156?sig=${index}`"
+                    :src="`https://source.unsplash.com/random/experimental?dark&sig=${index}`"
                     alt="rofl nvm"
+                    banner
                 >
-                <h3>{{ friend.name }}</h3>
-                <p>Age: {{ friend.age }}</p>
-                <p>Phone number: {{ friend.phone }}</p>
+                <div class="friends-list-item-content">
+                    <h3>{{ friend.name }}</h3>
+                    <p>Age: {{ friend.age }}</p>
+                    <p>Phone number: {{ friend.phone }}</p>
+                </div>
             </li>
         </ul>
         <div class="generator-container">

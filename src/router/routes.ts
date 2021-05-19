@@ -1,6 +1,7 @@
 import Landing from "../components/Landing.vue";
 import Counter from "../components/Counter.vue";
 import Friends from "../components/Friends.vue";
+import Calculator from "../components/Calculator.vue";
 
 export interface RouteType {
     path: string; name: string; component: () => typeof Landing;
@@ -20,5 +21,9 @@ export default [
     {
         path: "/friends", name: "Friends",
         component: () => Friends
+    },
+    {
+        path: "/calculator", name: "Calculator",
+        component: () => Calculator
     }
 ] as RouteType[];

@@ -2,7 +2,12 @@
     <h1>My friends!</h1>
     <InputGroup @get-friends="tryGettingFriends" />
     <FriendsList :friends="friends" />
-    <div id="test-lol" />
+    <img
+        id="test-lol"
+        src="https://source.unsplash.com/random/experimental?dark"
+        alt="roflmao"
+        banner
+    >
 </template>
 
 <script lang="ts">
