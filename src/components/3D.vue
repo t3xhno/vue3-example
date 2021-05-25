@@ -1,17 +1,17 @@
 <template>
     <div id="canvas">
-        <div class="floor"></div>
+        <div class="floor" />
         <div class="cube">
-            <div class="front"></div>
-            <div class="back"></div>
-            <div class="left"></div>
-            <div class="right"></div>
+            <div class="front" />
+            <div class="back" />
+            <div class="left" />
+            <div class="right" />
             <div class="top">
-                <div class="ballShadow"></div>
+                <div class="ballShadow" />
             </div>
-            <div class="bottom"></div>
+            <div class="bottom" />
         </div>
-        <div class="sphere"></div>
+        <div class="sphere" />
     </div>
 </template>
 
