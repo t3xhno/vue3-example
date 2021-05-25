@@ -22,7 +22,7 @@ interface Command {
 export default defineComponent({
     setup() {
         const result = ref(0);
-        const ops = [];
+        const ops: Command[] = [];
         const add: Command = {
             execute: () => {
                 result.value += 10;
